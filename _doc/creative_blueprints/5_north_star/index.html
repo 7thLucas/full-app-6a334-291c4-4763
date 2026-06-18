@@ -1,0 +1,91 @@
+<style>
+.mode-landscape .sl-body { flex-direction: row; }
+.mode-portrait .sl-body { flex-direction: column; }
+.mode-landscape .sl-col { width: 50%; }
+.mode-portrait .sl-col { width: 100%; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-10 gap-4">
+
+    <!-- Header -->
+    <div class="flex items-start justify-between gap-4">
+      <div>
+        <p class="text-xs font-bold tracking-widest uppercase text-teal-600 mb-1">North Star Metric</p>
+        <h2 class="text-2xl font-bold text-slate-900">Weekly Verified Operations</h2>
+      </div>
+      <span class="flex-shrink-0 text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200 rounded-full px-3 py-1 mt-1">
+        Projected impact — based on your inputs
+      </span>
+    </div>
+
+    <!-- Body -->
+    <div class="sl-body flex gap-5 flex-1">
+
+      <!-- Left: definition + formula -->
+      <div class="sl-col flex flex-col gap-4">
+
+        <div class="rounded-xl bg-slate-50 border border-slate-100 p-5">
+          <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-3">What to count (verified operations)</p>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="flex-shrink-0 w-2 h-2 rounded-full bg-teal-500"></span>
+              <p class="text-sm font-semibold text-slate-800">Appointment confirmed &amp; marked complete</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="flex-shrink-0 w-2 h-2 rounded-full bg-teal-400"></span>
+              <p class="text-sm font-semibold text-slate-800">Invoice generated from a completed appointment</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 mt-3 italic">Clicks, logins, and page views do not count.</p>
+        </div>
+
+        <div class="rounded-xl bg-slate-50 border border-slate-100 p-5 flex-1">
+          <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-3">Weekly Volume Formula</p>
+          <div class="flex flex-wrap items-center gap-2 text-sm mb-4">
+            <span class="bg-amber-100 text-amber-800 border border-amber-200 rounded-md px-2 py-0.5 text-xs font-semibold">N dentists — adjust</span>
+            <span class="text-slate-400 font-bold">×</span>
+            <span class="bg-amber-100 text-amber-800 border border-amber-200 rounded-md px-2 py-0.5 text-xs font-semibold">appts / day — adjust</span>
+            <span class="text-slate-400 font-bold">×</span>
+            <span class="font-semibold text-slate-700">5 days</span>
+            <span class="text-slate-400 font-bold">=</span>
+            <span class="font-bold text-teal-700">WVO / week</span>
+          </div>
+          <div class="bg-teal-50 border border-teal-100 rounded-lg p-3">
+            <p class="text-xs text-slate-600">
+              <strong class="text-teal-800">Example:</strong> 2 dentists × 8 appts/day × 5 days = <strong class="text-teal-700">80 verified ops / week</strong>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: value derivation + annual summary -->
+      <div class="sl-col flex flex-col gap-4">
+
+        <div class="rounded-xl bg-teal-800 p-5 flex flex-col gap-3 flex-1">
+          <p class="text-xs font-bold text-teal-300 uppercase tracking-wide">Projected Value (at 80 WVO / week)</p>
+          <div class="space-y-3 text-xs text-teal-100">
+            <div class="bg-teal-900 rounded-lg p-3">
+              <p class="font-bold text-white mb-1">Staff Time Recovered</p>
+              <p>80 ops × 5 min reminder call = 400 min = <strong class="text-teal-300">6.7 hrs / week</strong></p>
+              <p class="mt-1">6.7 hrs × <span class="bg-amber-900 text-amber-300 rounded px-1.5 py-0.5">$20/hr — adjust</span> = <strong class="text-teal-200">~$134/week → $7K/year</strong></p>
+            </div>
+            <div class="bg-teal-900 rounded-lg p-3">
+              <p class="font-bold text-white mb-1">Revenue Protected from No-Shows</p>
+              <p>80 appts × <span class="bg-amber-900 text-amber-300 rounded px-1.5 py-0.5">15% rate — adjust</span> × <span class="bg-amber-900 text-amber-300 rounded px-1.5 py-0.5">50% reduction</span> × <span class="bg-amber-900 text-amber-300 rounded px-1.5 py-0.5">$250 ticket — adjust</span></p>
+              <p class="mt-1">= <strong class="text-teal-200">~$1,500/week → $78K/year</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl bg-slate-900 p-5">
+          <p class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2">Annual Impact (combined, at example inputs)</p>
+          <p class="text-2xl font-extrabold text-white">~$85K / year</p>
+          <p class="text-xs text-slate-400 mt-1 leading-relaxed">80 WVO/week × 52 = 4,160 ops/yr. Fill in your real dentist count, ticket value, and no-show rate above to get your actual figure.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
