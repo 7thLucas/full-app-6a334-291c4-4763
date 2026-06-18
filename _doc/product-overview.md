@@ -1,0 +1,1 @@
+Build me an app for dental clinic staff to help them manage patient appointments, treatment plans, and billing with the goal to reduce no-shows and streamline patient care
