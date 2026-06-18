@@ -1,40 +1,53 @@
 <style>
-  .mode-landscape .sl-foundation-layout { display: flex; flex-direction: row; align-items: stretch; min-height: 100%; }
-  .mode-landscape .sl-content-panel { width: 55%; padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
-  .mode-landscape .sl-visual-panel { width: 45%; min-height: 0; }
-  .mode-portrait .sl-foundation-layout { display: flex; flex-direction: column; min-height: 100%; }
-  .mode-portrait .sl-content-panel { padding: 2rem 1.5rem; }
-  .mode-portrait .sl-visual-panel { min-height: 280px; }
+.mode-landscape .sl-shell { flex-direction: row; }
+.mode-portrait .sl-shell { flex-direction: column; }
+.mode-landscape .sl-problem { width: 50%; }
+.mode-portrait .sl-problem { width: 100%; }
+.mode-landscape .sl-solution { width: 50%; }
+.mode-portrait .sl-solution { width: 100%; }
 </style>
 <section class="w-full h-full overflow-auto bg-white">
-  <div class="sl-foundation-layout">
-    <div class="sl-content-panel">
-      <div class="flex items-center justify-between mb-4">
-        <span class="inline-block text-xs font-semibold tracking-widest uppercase" style="color:#0066CC;">Foundation</span>
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 border rounded-full" style="background-color:#0066CC; border-color:#0066CC30;">
-          <span class="text-xs font-semibold" style="color:#ffffff;">Validated</span>
+  <div class="sl-shell flex h-full">
 
-        </span>
-      </div>
-      <h1 class="text-3xl font-bold text-slate-900 leading-tight mb-8">Fragmented appointment, treatment, and billing management</h1>
-      <div class="space-y-5">
-        <div class="border-l-4 pl-4 relative" style="border-color:#F43F5E;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#E11D48;">The Problem</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Manual appointment systems, disconnected treatment records, and fragmented billing create inefficiencies, patient frustration, and lost revenue. Dental staff spend hours on administrative tasks instead of patient care.</p>
-        </div>
-        <div class="border-l-4 pl-4 relative" style="border-color:#0066CC;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#0066CC;">The Solution</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Dental clinics struggle with scattered systems for scheduling, patient communication, and billing, leading to high no-show rates, inefficient treatment planning, and administrative overhead that impacts revenue and patient satisfaction.</p>
-        </div>
-        <div class="border-l-4 border-sky-500 pl-4 relative"><h2 class="text-sm font-semibold text-sky-600 uppercase tracking-wide mb-1">Target Audience</h2><p class="text-slate-700 leading-relaxed text-sm">Dental practice managers, office coordinators, and dental assistants managing 100–500 patient records</p></div>
-        <div class="border-l-4 border-amber-500 pl-4 relative"><h2 class="text-sm font-semibold text-amber-600 uppercase tracking-wide mb-1">Personal Motivation</h2><p class="text-slate-700 leading-relaxed text-sm">Enable dental teams to focus on exceptional patient care rather than administrative burden</p></div>
-      </div>
-      <div class="mt-6 flex flex-wrap gap-2"><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Dental Practice Management</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Patient Engagement</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Billing Automation</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Appointment Scheduling</span></div>
-      <div class="mt-8"><data-attribution /></div>
+    <!-- Problem -->
+    <div class="sl-problem flex flex-col justify-center p-12 bg-slate-50 border-r border-slate-100">
+      <p class="text-xs font-bold tracking-widest uppercase text-rose-500 mb-4">The Problem</p>
+      <h2 class="text-3xl font-bold text-slate-900 leading-snug mb-6">Revenue lost, staff stretched, care fragmented.</h2>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3">
+          <span class="flex-shrink-0 mt-2 w-2 h-2 rounded-full bg-rose-400"></span>
+          <p class="text-sm text-slate-600 leading-relaxed">Dental clinics lose <strong class="text-slate-800">10–30% of scheduled revenue</strong> to no-shows — most preventable with a timely reminder.</p>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="flex-shrink-0 mt-2 w-2 h-2 rounded-full bg-rose-400"></span>
+          <p class="text-sm text-slate-600 leading-relaxed">Staff juggle separate scheduling, charting, and billing tools — creating errors and duplicated work across every patient interaction.</p>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="flex-shrink-0 mt-2 w-2 h-2 rounded-full bg-rose-400"></span>
+          <p class="text-sm text-slate-600 leading-relaxed">Treatment plans and invoices live apart from appointment records, slowing both care delivery and collections.</p>
+        </li>
+      </ul>
     </div>
-    <div class="sl-visual-panel relative">
-      <img src="http://localhost:8001/common/image-generation?prompt=busy+dental+reception+desk+chaos+paper+files+disorganized+scheduling+confusion&amp;keyspace=todxncz3&amp;user_id=4763" alt="visual" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent opacity-40"></div>
+
+    <!-- Solution -->
+    <div class="sl-solution flex flex-col justify-center p-12 bg-teal-800">
+      <p class="text-xs font-bold tracking-widest uppercase text-teal-300 mb-4">The Solution</p>
+      <h2 class="text-3xl font-bold text-white leading-snug mb-6">One platform connecting every step of the patient journey.</h2>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3">
+          <span class="flex-shrink-0 mt-2 w-2 h-2 rounded-full bg-teal-300"></span>
+          <p class="text-sm text-teal-100 leading-relaxed">Automated SMS &amp; email reminders fire at configurable intervals — staff do nothing extra, and no-shows drop significantly.</p>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="flex-shrink-0 mt-2 w-2 h-2 rounded-full bg-teal-300"></span>
+          <p class="text-sm text-teal-100 leading-relaxed">Appointments, treatment plans, and billing live in a single unified patient profile — no switching, no duplication.</p>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="flex-shrink-0 mt-2 w-2 h-2 rounded-full bg-teal-300"></span>
+          <p class="text-sm text-teal-100 leading-relaxed">Invoices generate directly from completed appointments in under 30 seconds — accurate, instant, no re-entry required.</p>
+        </li>
+      </ul>
     </div>
+
   </div>
 </section>
